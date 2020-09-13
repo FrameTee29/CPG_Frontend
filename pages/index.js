@@ -16,6 +16,15 @@ button,input{
 .Status_font{
   color:#49FF33;
 }
+.warring{
+  color:red;
+}
+.balance{
+  color:blue;
+}
+.key{
+  color:gray;
+}
 
 `
 
@@ -138,19 +147,26 @@ const Home = () => {
       <main>
         <h1>SEND ETH</h1>
         <p >
-          <span>Network: </span>
-          <span >{network}</span>
+          <h3>
+            <span>Network: </span>
+            <span className="key">{network}</span>
+          </h3>
         </p>
         <p >
-          <span >{warning}</span>
+          <h3 className="warring"><span >{warning}</span></h3>
         </p>
         <p >
-          <span>Wallet </span>
-          <span >Account : {userAccount}</span>
+          <h3>
+            <h2>Wallet </h2>
+            <span >Account :</span>
+            <span className="key">{userAccount}</span>
+          </h3>
         </p>
         <p >
-          <span>Balance: </span>
-          <span >{Balance}</span>
+          <h2>
+            <span>Balance: </span>
+            <span className="balance">{Balance}</span>
+          </h2>
         </p>
 
         <h1>FROM</h1>

@@ -1,0 +1,170 @@
+
+ /* - - - - - - - - - - -  BalooPaaji2 - - - - - - - - - */
+
+@font-face{
+    font-family:'BalooPaaji2-Bold';
+    src:url('/static/fonts/BalooPaaji2-Bold.ttf');
+}
+
+@font-face{
+    font-family:'BalooPaaji2-ExtraBold';
+    src:url('/static/fonts/BalooPaaji2-ExtraBold.ttf');
+}
+
+@font-face{
+    font-family:'BalooPaaji2-Medium';
+    src:url('/static/fonts/BalooPaaji2-Medium.ttf');
+}
+
+@font-face{
+    font-family:'BalooPaaji2-Regular';
+    src:url('/static/fonts/BalooPaaji2-Regular.ttf');
+}
+
+@font-face{
+    font-family:'BalooPaaji2-SemiBold';
+    src:url('/static/fonts/BalooPaaji2-SemiBold.ttf');
+}
+
+ /* - - - - - - - - - - - End  BalooPaaji2 - - - - - - - - - */
+
+
+
+ /* - - - - - - - - - - -Krub - - - - - - - - - */
+
+ @font-face{
+    font-family:'Krub-Bold';
+    src:url('/static/fonts/Krub-Bold.ttf');
+}
+
+ @font-face{
+    font-family:'Krub-BoldItalic';
+    src:url('/static/fonts/Krub-BoldItalic.ttf');
+}
+
+ @font-face{
+    font-family:'Krub-ExtraLight';
+    src:url('/static/fonts/Krub-ExtraLight.ttf');
+}
+
+ @font-face{
+    font-family:'Krub-ExtraLightItalic';
+    src:url('/static/fonts/Krub-ExtraLightItalic.ttf');
+}
+
+ @font-face{
+    font-family:'Krub-Italic';
+    src:url('/static/fonts/Krub-Italic.ttf');
+}
+
+ @font-face{
+    font-family:'Krub-Light';
+    src:url('/static/fonts/Krub-Light.ttf');
+}
+
+ @font-face{
+    font-family:'Krub-LightItalic';
+    src:url('/static/fonts/Krub-LightItalic');
+}
+
+ @font-face{
+    font-family:'Krub-Medium';
+    src:url('/static/fonts/Krub-Medium.ttf');
+}
+
+ @font-face{
+    font-family:'Krub-MediumItalic';
+    src:url('/static/fonts/Krub-MediumItalic.ttf');
+}
+
+ @font-face{
+    font-family:'Krub-Regular';
+    src:url('/static/fonts/Krub-Regular.ttf');
+}
+
+ @font-face{
+    font-family:'Krub-SemiBold';
+    src:url('/static/fonts/Krub-SemiBold.ttf');
+}
+
+ @font-face{
+    font-family:'Krub-SemiBoldItalic';
+    src:url('/static/fonts/Krub-SemiBoldItalic.ttf');
+}
+
+ /* - - - - - - - - - - -End Krub - - - - - - - - - */
+
+
+ /*-------------------- Mali ------------------------*/
+
+ @font-face{
+    font-family:'Mali-Bold';
+    src:url('/static/fonts/Mali-Bold.ttf');
+}
+
+ @font-face{
+    font-family:'Mali-BoldItalic';
+    src:url('/static/fonts/Mali-BoldItalic');
+}
+
+ @font-face{
+    font-family:'Mali-ExtraLight';
+    src:url('/static/fonts/Mali-ExtraLight.ttf');
+}
+
+ @font-face{
+    font-family:'Mali-ExtraLightItalic';
+    src:url('/static/fonts/Mali-ExtraLightItalic.ttf');
+}
+
+ @font-face{
+    font-family:'Mali-Italic';
+    src:url('/static/fonts/Mali-Italic.ttf');
+}
+
+  /*---------------- End Mali -----------------------*/
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+ /*-------------------- Poppins ------------------------*/
+
+ @font-face{
+    font-family:'Poppins-Black';
+    src:url('/static/fonts/Poppins-Black.ttf');
+}
+ @font-face{
+    font-family:'Poppins-BlackItalic';
+    src:url('/static/fonts/Poppins-BlackItalic.ttf');
+}
+ @font-face{
+    font-family:'Poppins-Bold';
+    src:url('/static/fonts/Poppins-Bold.ttf');
+}
+ @font-face{
+    font-family:'Poppins-BoldItalic';
+    src:url('/static/fonts/Poppins-BoldItalic.ttf');
+}
+ @font-face{
+    font-family:'Poppins-ExtraBold';
+    src:url('/static/fonts/Poppins-ExtraBold.ttf');
+}
+ @font-face{
+    font-family:'Poppins-ExtraBoldItalic';
+    src:url('/static/fonts/Poppins-ExtraBoldItalic.ttf');
+}
+ @font-face{
+    font-family:'Poppins-ExtraLight';
+    src:url('/static/fonts/Poppins-ExtraLight.ttf');
+}
+ @font-face{
+    font-family:'Poppins-ExtraLightItalic';
+    src:url('/static/fonts/Poppins-ExtraLightItalic.ttf');
+}
+ @font-face{
+    font-family:'Poppins-Regular';
+    src:url('/static/fonts/Poppins-Regular.ttf');
+}
+ 
+
+
+  /*---------------- End Poppins -----------------------*/

@@ -1,26 +1,23 @@
-import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import React from "react";
+import App from "next/app";
+import { Provider } from 'react-redux';
+import { createWrapper } from 'next-redux-wrapper';
+import store from '../redux/store';
+import 'antd/dist/antd.css';
+import { ThemeProvider } from 'styled-components';
 
-const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+class MyApp extends App{
+  render() {
+    const { Component , pageProps } = this.props
+    return (
+      <Provider store={store}>
+         <Component {...pageProps}></Component>
+      </Provider>
+    )
   }
-`
-
-const theme = {
-  colors: {
-    primary: '#0070f3',
-  },
 }
 
-export default function App({ Component, pageProps }) {
-  return (
-    <>
-      <GlobalStyle />
-      <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </>
-  )
-}
+const makestore = () => store;
+const wrapper = createWrapper(makestore)
+
+export default wrapper.withRedux(MyApp);

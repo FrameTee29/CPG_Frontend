@@ -5,12 +5,11 @@ const Web3 = require("web3");
 // const web3 = new Web3(new Web3.providers.HttpProvider('https://kovan.infura.io/v3/8d1234baedad4a588a49a51ac993aaf8'));
 const web3 = new Web3(Web3.givenProvider);
 
-export default function Home() {
+const Home = () => {
 
   const [network, setNetwork] = useState('');
   const [userAccount, setUserAccount] = useState('');
   const [warning, setWarning] = useState('');
-
 
   useEffect(() => {
     if (window.web3) {
@@ -56,10 +55,7 @@ export default function Home() {
 
   return (
     <div className="container">
-      <Head>
-        <title>Cryptocurrency Payment Gateway</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+
 
       <main>
         <h1>SEND ETH</h1>
@@ -86,4 +82,15 @@ export default function Home() {
       </main>
     </div>
   )
+
 }
+
+
+
+
+export default Home;
+
+  
+
+
+  

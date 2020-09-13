@@ -59,15 +59,18 @@ const Home = () => {
       }
     })
 
-    // Get Account 
     web3.eth.getAccounts().then(accounts => {
       setUserAccount(accounts[0]);
+      console.log(accounts[0]);
       reloadInfo();
     })
+    // Get Account 
+
   }
 
   const reloadInfo = async () => {
     try {
+
       getBalance();
 
     }
@@ -78,8 +81,10 @@ const Home = () => {
 
 
   const getBalance = () => {
-    web3.eth.getBalance("0x35dd8Bcd4f864835cc1D23Eb459506bdA8983cB2").then(result => {
-      setBalance(web3.utils.fromWei(result));
+    web3.eth.getAccounts().then(accounts => {
+      web3.eth.getBalance(accounts[0]).then(result => {
+        setBalance(web3.utils.fromWei(result));
+      })
     })
   }
 

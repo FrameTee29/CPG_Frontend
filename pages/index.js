@@ -26,7 +26,7 @@ const Home = () => {
   const [userAccount, setUserAccount] = useState('');
   const [warning, setWarning] = useState('');
   const [Balance, setBalance] = useState(0);
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState('0.00001');
   const [link, setLink] = useState("-");
   const [status, setStatus] = useState("-");
 
@@ -158,7 +158,7 @@ const Home = () => {
         <h1>TO</h1>
         <input value="FrameTee Company" />
         <h1>Amount</h1>
-        <input placeholder="0.00" onChange={e => setAmount(e.target.value)} />
+        <input value={amount} onChange={e => setAmount(e.target.value)} />
         <p>
           <button onClick={etherTransfer}>Submit</button>
         </p>

@@ -3,11 +3,13 @@ import { useState, useEffect } from 'react';
 const Tx = require('ethereumjs-tx').Transaction;
 const Web3 = require("web3");
 const web3 = new Web3(new Web3.providers.HttpProvider('https://kovan.infura.io/v3/8d1234baedad4a588a49a51ac993aaf8'));
+
+
+
 export default function Home() {
   const [network, setNetwork] = useState('');
   const [userAccount, setUserAccount] = useState('');
   const [warning, setWarning] = useState('');
-
 
 
   web3.eth.net.getId().then(netId => {
@@ -39,10 +41,9 @@ export default function Home() {
     }
 
 
-
-    web3.eth.getAccounts().then(accounts => {
-      setUserAccount(accounts[0])
-    })
+    // web3.eth.getAccounts().then(accounts => {
+    //   setUserAccount(accounts[0])
+    // })
   })
 
 
@@ -60,6 +61,9 @@ export default function Home() {
         <p class="p_network">
           <span>Network: </span>
           <span id="eth_network">{network}</span>
+        </p>
+        <p class="p_warning">
+          <span id="warning"></span>
         </p>
 
         <h1>FROM</h1>

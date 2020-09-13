@@ -11,12 +11,12 @@ export default function Home() {
   const [userAccount, setUserAccount] = useState('');
   const [warning, setWarning] = useState('');
 
-  
-  useEffect(()=>{
-    startApp();
-  },[])
 
-  const startApp =()=>{
+  useEffect(() => {
+    startApp();
+  }, [])
+
+  const startApp = () => {
     web3.eth.net.getId().then(netId => {
       console.log('netId: ' + netId)
       switch (netId) {
@@ -60,12 +60,12 @@ export default function Home() {
       <main>
         <h1>SEND ETH</h1>
 
-        <p class="p_network">
+        <p >
           <span>Network: </span>
-          <span id="eth_network">{network}</span>
+          <span >{network}</span>
         </p>
-        <p class="p_warning">
-          <span id="warning">{warning}</span>
+        <p >
+          <span >{warning}</span>
         </p>
 
         <h1>FROM</h1>

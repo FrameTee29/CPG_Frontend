@@ -1,9 +1,16 @@
 import Head from 'next/head'
 import { useState, useEffect } from 'react';
+import styled from 'styled-components';
 const Tx = require('ethereumjs-tx').Transaction;
 const Web3 = require("web3");
 // const web3 = new Web3(new Web3.providers.HttpProvider('https://kovan.infura.io/v3/8d1234baedad4a588a49a51ac993aaf8'));
 const web3 = new Web3(Web3.givenProvider);
+
+const StyledWrapper = styled.body`
+
+font-family: 'Poppins', sans-serif;
+`
+
 
 const Home = () => {
 
@@ -54,12 +61,9 @@ const Home = () => {
   }
 
   return (
-    <div className="container">
-
-
+    <StyledWrapper>
       <main>
         <h1>SEND ETH</h1>
-
         <p >
           <span>Network: </span>
           <span >{network}</span>
@@ -67,7 +71,6 @@ const Home = () => {
         <p >
           <span >{warning}</span>
         </p>
-
         <p >
           <span>Wallet </span>
           <span >Account : {userAccount}</span>
@@ -78,10 +81,13 @@ const Home = () => {
         <input />
         <h1>Amount</h1>
         <input />
-        <button>Submit</button>
+        <p>
+          <button>Submit</button>
+        </p>
+
       </main>
-    </div>
-  )
+    </StyledWrapper>
+  );
 
 }
 
@@ -90,7 +96,7 @@ const Home = () => {
 
 export default Home;
 
-  
 
 
-  
+
+

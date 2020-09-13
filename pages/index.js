@@ -1,6 +1,7 @@
 import Head from 'next/head'
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import styled from 'styled-components';
+import { Transaction } from 'ethereumjs-tx';
 const Tx = require('ethereumjs-tx').Transaction;
 const Web3 = require("web3");
 const web3 = new Web3(Web3.givenProvider);
@@ -9,6 +10,9 @@ const web3 = new Web3(Web3.givenProvider);
 const StyledWrapper = styled.body`
 
 font-family: 'Poppins', sans-serif;
+button,input{
+  width:500px;
+}
 
 `
 
@@ -19,6 +23,9 @@ const Home = () => {
   const [userAccount, setUserAccount] = useState('');
   const [warning, setWarning] = useState('');
   const [Balance, setBalance] = useState(0);
+  const [amount, setAmount] = useState(0);
+  const [link, setLink] = useState("-");
+  const [status, setStatus] = useState("-");
 
   useEffect(() => {
     // Get current network
@@ -79,13 +86,47 @@ const Home = () => {
     }
   }
 
-
+  // Get balance
   const getBalance = () => {
     web3.eth.getAccounts().then(accounts => {
       web3.eth.getBalance(accounts[0]).then(result => {
         setBalance(web3.utils.fromWei(result));
       })
     })
+  }
+
+  // ETH transfer
+  const etherTransfer = () => {
+
+    let toAddress = "0x6bc0b407Bb71b3e05091cD3837D0C3430764adc5";
+    let amountInText = amount;
+
+    console.log("ผู้โอน = " + toAddress);
+    console.log("จำนวนเหรียญ = " + amountInText);
+
+    let sender = userAccount;
+    let amountcoin = web3.utils.toWei(amountInText, "ether");
+    web3.eth.sendTransaction(
+      {
+        from: sender,
+        to: toAddress,
+        value: amountcoin
+      }
+    ).on('error', (error) => {
+      console.error(error)
+    }).on('transactionHash', (transactionHash) => {
+      console.log(transactionHash)
+      setLink("https://" + network.toLowerCase() + ".etherscan.io/tx/" + transactionHash);
+    }).on('confirmation', (confirmationNumber, receipt) => {
+      console.log('confirmationNumber', confirmationNumber)
+      console.log(receipt);
+
+      setStatus("Success");
+      callback(ok);
+    })
+
+
+
   }
 
 
@@ -110,13 +151,21 @@ const Home = () => {
         </p>
 
         <h1>FROM</h1>
-        <input />
+        <input value={userAccount} />
         <h1>TO</h1>
-        <input />
+        <input value="FrameTee Company" />
         <h1>Amount</h1>
-        <input />
+        <input placeholder="0.00" onChange={e => setAmount(e.target.value)} />
         <p>
-          <button>Submit</button>
+          <button onClick={etherTransfer}>Submit</button>
+        </p>
+        <p >
+          <span>Your pending Transaction:</span>
+          <span ><a target="_blank" href={link}>{link}</a></span>
+        </p>
+        <p >
+          <span>Status:</span>
+          <span >{status}</span>
         </p>
 
       </main>

@@ -78,10 +78,9 @@ const Home = () => {
 
 
   const getBalance = () => {
-    console.log("COIN")
-    // web3.eth.getBalance(userAccount).then(result => {
-    //   console.log(web3.utils.fromWei(result));
-    // })
+    web3.eth.getBalance("0x35dd8Bcd4f864835cc1D23Eb459506bdA8983cB2").then(result => {
+      console.log(web3.utils.fromWei(result));
+    })
   }
 
 

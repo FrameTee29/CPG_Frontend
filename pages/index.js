@@ -13,6 +13,9 @@ font-family: 'Poppins', sans-serif;
 button,input{
   width:500px;
 }
+.Status_font{
+  color:#49FF33;
+}
 
 `
 
@@ -165,7 +168,7 @@ const Home = () => {
         </p>
         <p >
           <span>Status:</span>
-          <span >{status}</span>
+          <span className="Status_font">{status}</span>
         </p>
 
       </main>

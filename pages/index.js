@@ -13,6 +13,10 @@ export default function Home() {
 
 
   useEffect(() => {
+    if (window.web3) {
+      window.web3 = new Web3(window.web3.currentProvider);
+      window.ethereum.enable();
+    }
     startApp();
   }, [])
 
@@ -46,7 +50,7 @@ export default function Home() {
     })
 
     web3.eth.getAccounts().then(accounts => {
-      console.log(accounts[0])
+      setUserAccount(accounts[0])
     })
   }
 
@@ -68,6 +72,10 @@ export default function Home() {
           <span >{warning}</span>
         </p>
 
+        <p >
+          <span>Wallet </span>
+          <span >Account : {userAccount}</span>
+        </p>
         <h1>FROM</h1>
         <input />
         <h1>TO</h1>

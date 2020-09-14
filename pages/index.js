@@ -20,6 +20,14 @@ font-family: 'Poppins', sans-serif;
   min-height:100vh;
 }
 
+.container2{
+  padding:20px;
+  border:solid 2px;
+  border-radius:15px;
+}
+
+
+
 button,input{
   width:500px;
 }
@@ -31,9 +39,15 @@ button,input{
 }
 .balance{
   color:blue;
+  border:none;
 }
+.network{
+color:green;
+}
+
 .key{
   color:gray;
+  border:none;
 }
 .loading{
   color:black;
@@ -167,45 +181,50 @@ const Home = () => {
 
   return (
     <StyledWrapper>
-      <div className="container">
-        <h1>SEND ETH</h1>
-        <span>Network: </span>
-        <span className="key">{network}</span>
-        <h3 className="warring"><span >{warning}</span></h3>
-        <h2>Wallet </h2>
-        <div>
-          <span >Account :</span>
-          <span className="key">{userAccount}</span>
-        </div>
-        <div>
-          <span>Balance: </span>
-          <span className="balance">{Balance}</span>
-        </div>
+      <main className="container">
+        <div className="container2">
+          <h1>SEND ETH</h1>
+          <span>Network </span>
+          <span className="network">{network}</span>
+          <h3 className="warring"><span >{warning}</span></h3>
 
-        <form>
-          <div class="form-group">
-            <label>From</label>
-            <input class="form-control" value={userAccount} />
+
+          <h2>Wallet </h2>
+          <div class="form-group ">
+            <label>Account :</label>
+            <input class="form-control key" value={userAccount} />
           </div>
-          <div class="form-group">
-            <label>To</label>
-            <input class="form-control" value="FrameTee Company" />
+          <div class="form-group ">
+            <label>Balance:</label>
+            <input class="form-control balance" value={Balance + " ETH"} />
           </div>
-          <div class="form-group">
-            <label>Amount</label>
-            <input class="form-control" value={amount} onChange={e => setAmount(e.target.value)} />
-          </div>
-          <button type="submit" class="btn btn-primary" onClick={etherTransfer}>Submit</button>
-          <p >
-            <span>Your pending Transaction:</span>
-            <span ><a target="_blank" href={link}>{link}</a></span>
-          </p>
-          <p >
-            <span>Status:</span>
-            <span className="Status_font">{status == "fail" ? <span className="loading"><LoadingOutlined /></span> : <span>{status}</span>}</span>
-          </p>
-        </form>
-      </div>
+          <h2>Transfer </h2>
+          
+            <div class="form-group">
+              <label>From <input class="form-control" value={userAccount} /></label>
+            </div>
+            <div class="form-group">
+              <label>To</label>
+              <input class="form-control" value="FrameTee Company" />
+            </div>
+            <div class="form-group">
+              <label>Amount</label>
+              <input class="form-control" value={amount} onChange={e => setAmount(e.target.value)} />
+            </div>
+            <button type="submit" class="btn btn-primary" onClick={etherTransfer}>Submit</button>
+
+         
+        </div>
+        <p >
+          <span>Your pending Transaction:</span>
+          <span ><a target="_blank" href={link}>{link}</a></span>
+        </p>
+        <p >
+          <span>Status:</span>
+          <span className="Status_font">{status == "fail" ? <span className="loading"><LoadingOutlined /></span> : <span>{status}</span>}</span>
+        </p>
+      </main>
+
     </StyledWrapper >
   );
 

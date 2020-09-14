@@ -41,11 +41,24 @@ const Home = () => {
 
   useEffect(() => {
     // Get current network
+    // if (window.web3) {
+    //   window.web3 = new Web3(window.web3.currentProvider);
+    //   window.ethereum.enable();
+    //   startApp();
+    // }
+
     if (window.web3) {
-      window.web3 = new Web3(window.web3.currentProvider);
-      window.ethereum.enable();
+      console.log(window.web3)
+      try {
+        window.ethereum.enable().then(result => {
+          startApp();
+        });
+      }
+      catch (err) {
+        console.log(err)
+      }
     }
-    startApp();
+
   }, [])
 
   const startApp = async () => {

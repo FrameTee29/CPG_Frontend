@@ -1,5 +1,6 @@
-import Head from 'next/head'
+import { Form, Select, InputNumber, Switch, Slider, Button } from 'antd'
 import { useState, useEffect, useCallback } from 'react';
+import { LoadingOutlined } from '@ant-design/icons';
 import styled from 'styled-components';
 import { Transaction } from 'ethereumjs-tx';
 const Tx = require('ethereumjs-tx').Transaction;
@@ -10,6 +11,7 @@ const web3 = new Web3(Web3.givenProvider);
 const StyledWrapper = styled.body`
 
 font-family: 'Poppins', sans-serif;
+
 button,input{
   width:500px;
 }
@@ -24,6 +26,10 @@ button,input{
 }
 .key{
   color:gray;
+}
+.loading{
+  color:black;
+  font-size:30px;
 }
 
 `
@@ -40,13 +46,8 @@ const Home = () => {
   const [status, setStatus] = useState("-");
 
   useEffect(() => {
-    // Get current network
-    // if (window.web3) {
-    //   window.web3 = new Web3(window.web3.currentProvider);
-    //   window.ethereum.enable();
-    //   startApp();
-    // }
 
+    // Check metamask
     if (window.web3) {
       console.log(window.web3)
       try {
@@ -122,6 +123,7 @@ const Home = () => {
 
   // ETH transfer
   const etherTransfer = () => {
+    setStatus("fail")
 
     let toAddress = "0x6bc0b407Bb71b3e05091cD3837D0C3430764adc5";
     let amountInText = amount;
@@ -159,46 +161,51 @@ const Home = () => {
     <StyledWrapper>
       <main>
         <h1>SEND ETH</h1>
-        <p >
-          <h3>
-            <span>Network: </span>
-            <span className="key">{network}</span>
-          </h3>
-        </p>
-        <p >
-          <h3 className="warring"><span >{warning}</span></h3>
-        </p>
-        <p >
-          <h3>
-            <h2>Wallet </h2>
-            <span >Account :</span>
-            <span className="key">{userAccount}</span>
-          </h3>
-        </p>
-        <p >
-          <h2>
-            <span>Balance: </span>
-            <span className="balance">{Balance}</span>
-          </h2>
-        </p>
+        <h3>
+          <span>Network: </span>
+          <span className="key">{network}</span>
+        </h3>
 
-        <h1>FROM</h1>
-        <input value={userAccount} />
-        <h1>TO</h1>
-        <input value="FrameTee Company" />
-        <h1>Amount</h1>
-        <input value={amount} onChange={e => setAmount(e.target.value)} />
-        <p>
-          <button onClick={etherTransfer}>Submit</button>
-        </p>
+        <h3 className="warring"><span >{warning}</span></h3>
+
+
+        <h3>
+          <h2>Wallet </h2>
+          <span >Account :</span>
+          <span className="key">{userAccount}</span>
+        </h3>
+
+
+        <h2>
+          <span>Balance: </span>
+          <span className="balance">{Balance}</span>
+        </h2>
+
+
+
+        <div class="form-group">
+          <label>From</label>
+          <input class="form-control" value={userAccount} />
+        </div>
+        <div class="form-group">
+          <label>To</label>
+          <input class="form-control" value="FrameTee Company" />
+        </div>
+        <div class="form-group">
+          <label>Amount</label>
+          <input class="form-control" value={amount} onChange={e => setAmount(e.target.value)} />
+          {/* <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> */}
+        </div>
+        <button type="submit" class="btn btn-primary" onClick={etherTransfer}>Submit</button>
         <p >
           <span>Your pending Transaction:</span>
           <span ><a target="_blank" href={link}>{link}</a></span>
         </p>
         <p >
           <span>Status:</span>
-          <span className="Status_font">{status}</span>
+          <span className="Status_font">{status == "fail" ? <span className="loading"><LoadingOutlined /></span>: <span>{status}</span>}</span>
         </p>
+
 
       </main>
     </StyledWrapper>
@@ -210,6 +217,8 @@ const Home = () => {
 
 
 export default Home;
+
+
 
 
 

@@ -12,6 +12,14 @@ const StyledWrapper = styled.body`
 
 font-family: 'Poppins', sans-serif;
 
+.container{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+}
+
 button,input{
   width:500px;
 }
@@ -159,56 +167,46 @@ const Home = () => {
 
   return (
     <StyledWrapper>
-      <main>
+      <div className="container">
         <h1>SEND ETH</h1>
-        <h3>
-          <span>Network: </span>
-          <span className="key">{network}</span>
-        </h3>
-
+        <span>Network: </span>
+        <span className="key">{network}</span>
         <h3 className="warring"><span >{warning}</span></h3>
-
-
-        <h3>
-          <h2>Wallet </h2>
+        <h2>Wallet </h2>
+        <div>
           <span >Account :</span>
           <span className="key">{userAccount}</span>
-        </h3>
-
-
-        <h2>
+        </div>
+        <div>
           <span>Balance: </span>
           <span className="balance">{Balance}</span>
-        </h2>
-
-
-
-        <div class="form-group">
-          <label>From</label>
-          <input class="form-control" value={userAccount} />
         </div>
-        <div class="form-group">
-          <label>To</label>
-          <input class="form-control" value="FrameTee Company" />
-        </div>
-        <div class="form-group">
-          <label>Amount</label>
-          <input class="form-control" value={amount} onChange={e => setAmount(e.target.value)} />
-          {/* <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> */}
-        </div>
-        <button type="submit" class="btn btn-primary" onClick={etherTransfer}>Submit</button>
-        <p >
-          <span>Your pending Transaction:</span>
-          <span ><a target="_blank" href={link}>{link}</a></span>
-        </p>
-        <p >
-          <span>Status:</span>
-          <span className="Status_font">{status == "fail" ? <span className="loading"><LoadingOutlined /></span>: <span>{status}</span>}</span>
-        </p>
 
-
-      </main>
-    </StyledWrapper>
+        <form>
+          <div class="form-group">
+            <label>From</label>
+            <input class="form-control" value={userAccount} />
+          </div>
+          <div class="form-group">
+            <label>To</label>
+            <input class="form-control" value="FrameTee Company" />
+          </div>
+          <div class="form-group">
+            <label>Amount</label>
+            <input class="form-control" value={amount} onChange={e => setAmount(e.target.value)} />
+          </div>
+          <button type="submit" class="btn btn-primary" onClick={etherTransfer}>Submit</button>
+          <p >
+            <span>Your pending Transaction:</span>
+            <span ><a target="_blank" href={link}>{link}</a></span>
+          </p>
+          <p >
+            <span>Status:</span>
+            <span className="Status_font">{status == "fail" ? <span className="loading"><LoadingOutlined /></span> : <span>{status}</span>}</span>
+          </p>
+        </form>
+      </div>
+    </StyledWrapper >
   );
 
 }

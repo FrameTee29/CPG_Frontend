@@ -55,7 +55,7 @@ const Topbar = () => {
                 {/* <div className="logo" /> */}
                 
                 <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']} className="Container_topbar">
-                    <Menu.Item key="1" icon={<UserOutlined />}>Fashion Cloth</Menu.Item>
+                    <Menu.Item key="1" ><img src="/static/images/icons8-clothes-48.png"/>Fashion Cloth</Menu.Item>
                     <Menu.Item key="2" icon={<VideoCameraOutlined />}>Mobile Phone</Menu.Item>
                     <Menu.Item key="3" icon={<UploadOutlined />}>Watch</Menu.Item>
                     <Menu.Item key="5" icon={<UploadOutlined />}>Computer</Menu.Item>

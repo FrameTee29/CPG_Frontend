@@ -2,6 +2,8 @@ import { useState, useEffect, useCallback } from 'react';
 import styled from 'styled-components';
 import { Layout, Menu, Row, Col, Divider } from 'antd';
 import { UploadOutlined, UserOutlined, VideoCameraOutlined } from '@ant-design/icons';
+import Link from 'next/link';
+import Route from 'next/router';
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -314,6 +316,11 @@ body {
     width:150px;
 }
 `
+    const keepETH = (e) => {
+        sessionStorage.setItem('amount', e);
+    }
+
+
 
     return (
         <Layout>
@@ -331,7 +338,7 @@ body {
                                         <div class="row">
                                             <div class="el-wrapper">
                                                 <div class="box-up">
-                                                    <img className="sizeCloth" src="/static/images/Linen_Black.jpg"  />
+                                                    <img className="sizeCloth" src="/static/images/Linen_Black.jpg" />
                                                     <div class="img-info">
                                                         <div class="info-inner">
                                                             <span class="p-name">Linen T-shirt</span>
@@ -345,13 +352,14 @@ body {
                                                     <div class="h-bg">
                                                         <div class="h-bg-inner"></div>
                                                     </div>
-
-                                                    <a class="cart" href="#">
-                                                        <span class="price">0.044411 ETH</span>
-                                                        <span class="add-to-cart">
-                                                            <span class="txt">Add in cart</span>
-                                                        </span>
-                                                    </a>
+                                                    <Link href="/sendETH" >
+                                                        <a class="cart" href="#" onClick={() => keepETH(0.044411)}>
+                                                            <span class="price">0.044411 ETH</span>
+                                                            <span class="add-to-cart">
+                                                                <span class="txt">BUY</span>
+                                                            </span>
+                                                        </a>
+                                                    </Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -378,13 +386,14 @@ body {
                                                     <div class="h-bg">
                                                         <div class="h-bg-inner"></div>
                                                     </div>
-
-                                                    <a class="cart" href="#">
-                                                        <span class="price">0.044411 ETH</span>
-                                                        <span class="add-to-cart">
-                                                            <span class="txt">Add in cart</span>
-                                                        </span>
-                                                    </a>
+                                                    <Link href="/sendETH" >
+                                                        <a class="cart" href="#" onClick={() => keepETH(0.044411)}>
+                                                            <span class="price">0.044411 ETH</span>
+                                                            <span class="add-to-cart">
+                                                                <span class="txt">BUY</span>
+                                                            </span>
+                                                        </a>
+                                                    </Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -411,13 +420,14 @@ body {
                                                     <div class="h-bg">
                                                         <div class="h-bg-inner"></div>
                                                     </div>
-
-                                                    <a class="cart" href="#">
-                                                        <span class="price">0.044411 ETH</span>
-                                                        <span class="add-to-cart">
-                                                            <span class="txt">Add in cart</span>
-                                                        </span>
-                                                    </a>
+                                                    <Link href="/sendETH" >
+                                                        <a class="cart" href="#" onClick={() => keepETH(0.044411)}>
+                                                            <span class="price">0.044411 ETH</span>
+                                                            <span class="add-to-cart">
+                                                                <span class="txt">BUY</span>
+                                                            </span>
+                                                        </a>
+                                                    </Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -444,13 +454,14 @@ body {
                                                     <div class="h-bg">
                                                         <div class="h-bg-inner"></div>
                                                     </div>
-
-                                                    <a class="cart" href="#">
-                                                        <span class="price">0.053311 ETH</span>
-                                                        <span class="add-to-cart">
-                                                            <span class="txt">Add in cart</span>
-                                                        </span>
-                                                    </a>
+                                                    <Link href="/sendETH" >
+                                                        <a class="cart" href="#" onClick={() => keepETH(0.053311)}>
+                                                            <span class="price">0.053311 ETH</span>
+                                                            <span class="add-to-cart">
+                                                                <span class="txt">BUY</span>
+                                                            </span>
+                                                        </a>
+                                                    </Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -468,7 +479,7 @@ body {
                                         <div class="row">
                                             <div class="el-wrapper">
                                                 <div class="box-up">
-                                                    <img className="sizeCloth" src="/static/images/Polo_striped.jpg"  loading="lazy"/>
+                                                    <img className="sizeCloth" src="/static/images/Polo_striped.jpg" loading="lazy" />
                                                     <div class="img-info">
                                                         <div class="info-inner">
                                                             <span class="p-name">Polo Shirt Slim Fit</span>
@@ -482,13 +493,14 @@ body {
                                                     <div class="h-bg">
                                                         <div class="h-bg-inner"></div>
                                                     </div>
-
-                                                    <a class="cart" href="#">
-                                                        <span class="price">0.053311 ETH</span>
-                                                        <span class="add-to-cart">
-                                                            <span class="txt">Add in cart</span>
-                                                        </span>
-                                                    </a>
+                                                    <Link href="/sendETH" >
+                                                        <a class="cart" href="#" onClick={() => keepETH(0.053311)}>
+                                                            <span class="price">0.053311 ETH</span>
+                                                            <span class="add-to-cart">
+                                                                <span class="txt">BUY</span>
+                                                            </span>
+                                                        </a>
+                                                    </Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -501,7 +513,7 @@ body {
                                         <div class="row">
                                             <div class="el-wrapper">
                                                 <div class="box-up">
-                                                    <img className="sizeCloth" src="/static/images/Jean_Blue.jpg" loading="lazy"/>
+                                                    <img className="sizeCloth" src="/static/images/Jean_Blue.jpg" loading="lazy" />
                                                     <div class="img-info">
                                                         <div class="info-inner">
                                                             <span class="p-name">Regular Jeans</span>
@@ -515,13 +527,14 @@ body {
                                                     <div class="h-bg">
                                                         <div class="h-bg-inner"></div>
                                                     </div>
-
-                                                    <a class="cart" href="#">
-                                                        <span class="price">0.097811 ETH</span>
-                                                        <span class="add-to-cart">
-                                                            <span class="txt">Add in cart</span>
-                                                        </span>
-                                                    </a>
+                                                    <Link href="/sendETH" >
+                                                        <a class="cart" href="#" onClick={() => keepETH(0.097811)}>
+                                                            <span class="price">0.097811 ETH</span>
+                                                            <span class="add-to-cart">
+                                                                <span class="txt">BUY</span>
+                                                            </span>
+                                                        </a>
+                                                    </Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -534,7 +547,7 @@ body {
                                         <div class="row">
                                             <div class="el-wrapper">
                                                 <div class="box-up">
-                                                    <img className="sizeCloth" src="/static/images/Jean_Black.jpg" loading="lazy"/>
+                                                    <img className="sizeCloth" src="/static/images/Jean_Black.jpg" loading="lazy" />
                                                     <div class="img-info">
                                                         <div class="info-inner">
                                                             <span class="p-name">Regular Jeans</span>
@@ -548,13 +561,14 @@ body {
                                                     <div class="h-bg">
                                                         <div class="h-bg-inner"></div>
                                                     </div>
-
-                                                    <a class="cart" href="#">
-                                                        <span class="price">0.097811 ETH</span>
-                                                        <span class="add-to-cart">
-                                                            <span class="txt">Add in cart</span>
-                                                        </span>
-                                                    </a>
+                                                    <Link href="/sendETH" >
+                                                        <a class="cart" href="#" onClick={() => keepETH(0.097811)}>
+                                                            <span class="price">0.097811 ETH</span>
+                                                            <span class="add-to-cart">
+                                                                <span class="txt">BUY</span>
+                                                            </span>
+                                                        </a>
+                                                    </Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -567,7 +581,7 @@ body {
                                         <div class="row">
                                             <div class="el-wrapper">
                                                 <div class="box-up">
-                                                    <img  className="sizeCloth" src="/static/images/Jean_Grey.jpg" loading="lazy"/>
+                                                    <img className="sizeCloth" src="/static/images/Jean_Grey.jpg" loading="lazy" />
                                                     <div class="img-info">
                                                         <div class="info-inner">
                                                             <span class="p-name">Regular Jeans</span>
@@ -581,13 +595,14 @@ body {
                                                     <div class="h-bg">
                                                         <div class="h-bg-inner"></div>
                                                     </div>
-
-                                                    <a class="cart" href="#">
-                                                        <span class="price">0.097811 ETH</span>
-                                                        <span class="add-to-cart">
-                                                            <span class="txt">Add in cart</span>
-                                                        </span>
-                                                    </a>
+                                                    <Link href="/sendETH" >
+                                                        <a class="cart" href="#" onClick={() => keepETH(0.097811)}>
+                                                            <span class="price">0.097811 ETH</span>
+                                                            <span class="add-to-cart">
+                                                                <span class="txt">BUY</span>
+                                                            </span>
+                                                        </a>
+                                                    </Link>
                                                 </div>
                                             </div>
                                         </div>

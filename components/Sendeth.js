@@ -57,7 +57,7 @@ color:green;
 `
 
 
-const SendETH = () => {
+const TransferETH = () => {
 
   const [network, setNetwork] = useState('');
   const [userAccount, setUserAccount] = useState('');
@@ -205,7 +205,7 @@ const SendETH = () => {
             </div>
             <div class="form-group">
               <label>Amount</label>
-              <input class="form-control" value={amount} onChange={e => setAmount(e.target.value)} />
+              <input class="form-control" value={sessionStorage.getItem('amount')} onChange={e => setAmount(e.target.value)} />
             </div>
             <button type="submit" class="btn btn-primary" onClick={etherTransfer}>Submit</button>
 
@@ -229,7 +229,7 @@ const SendETH = () => {
 
 
 
-export default SendETH;
+export default TransferETH;
 
 
 

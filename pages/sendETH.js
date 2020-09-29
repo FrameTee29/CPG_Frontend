@@ -4,9 +4,10 @@ import styled from 'styled-components';
 import Topbar from '../components/Topbar';
 import { Layout } from 'antd';
 import Content_product from '../components/content_product';
+import Content_send from '../components/content_send';
 const { Header, Content, Footer, Sider } = Layout;
 
-const products = () => {
+const sendETH = () => {
     const StyledWrapper = styled.body`
     `;
 
@@ -15,10 +16,10 @@ const products = () => {
             <title>Cryptocurrency Payment Gateway</title>
             <Layout>
                 <Topbar/>
-                <Content_product/>
+                <Content_send/>
             </Layout>
         </StyledWrapper>
     )
 }
 
-export default products;
+export default sendETH;

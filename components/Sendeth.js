@@ -63,7 +63,7 @@ const TransferETH = () => {
   const [userAccount, setUserAccount] = useState('');
   const [warning, setWarning] = useState('');
   const [Balance, setBalance] = useState(0);
-  const [amount, setAmount] = useState('0.00001');
+  const [amount, setAmount] = useState(sessionStorage.getItem('amount'));
   const [link, setLink] = useState("-");
   const [status, setStatus] = useState("-");
 
@@ -205,7 +205,7 @@ const TransferETH = () => {
             </div>
             <div class="form-group">
               <label>Amount</label>
-              <input class="form-control" value={sessionStorage.getItem('amount')} onChange={e => setAmount(e.target.value)} />
+              <input class="form-control" value={amount} onChange={e => setAmount(e.target.value)} />
             </div>
             <button type="submit" class="btn btn-primary" onClick={etherTransfer}>Submit</button>
 

@@ -20,6 +20,7 @@ const Topbar = () => {
         margin: 16px;
     }
 
+        
     .site-layout-sub-header-background {
         background: #fff;
     }
@@ -28,15 +29,6 @@ const Topbar = () => {
         background: #fff;
     }
 
-    .logo {
-        height: 32px;
-        background: rgba(255, 255, 255, 0.2);
-        margin: 16px;
-    }
-    .ant-layout-sider-zero-width-trigger{
-        top: 0;
-    }
-    
 `
 
 
@@ -52,14 +44,13 @@ const Topbar = () => {
             }}
         >
             <StyledWrapper>
-                {/* <div className="logo" /> */}
-                
+                 
                 <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']} className="Container_topbar">
-                    <Menu.Item key="1" ><img src="/static/images/icons8-clothes-48.png"/>Fashion Cloth</Menu.Item>
-                    <Menu.Item key="2" icon={<VideoCameraOutlined />}>Mobile Phone</Menu.Item>
-                    <Menu.Item key="3" icon={<UploadOutlined />}>Watch</Menu.Item>
-                    <Menu.Item key="5" icon={<UploadOutlined />}>Computer</Menu.Item>
-                    <Menu.Item key="6" icon={<UserOutlined />}>Food</Menu.Item>
+                    <Menu.Item key="1" ><img src="/static/images/icons8-men's-pajama-40.png"/>Fashion Cloth</Menu.Item>
+                    <Menu.Item key="2" ><img src="/static/images/icons8-android-40.png"/>Mobile Phone</Menu.Item>
+                    <Menu.Item key="3" ><img src="/static/images/icons8-smart-watch-40.png"/>Watch</Menu.Item>
+                    <Menu.Item key="5" ><img src="/static/images/icons8-laptop-40.png"/>Computer</Menu.Item>
+                    <Menu.Item key="6" ><img src="/static/images/icons8-food-bar-40.png"/>Food</Menu.Item>
                 </Menu>
             </StyledWrapper>
         </Sider>

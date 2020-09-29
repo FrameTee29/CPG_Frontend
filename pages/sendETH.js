@@ -16,7 +16,7 @@ const sendETH = () => {
             <title>Cryptocurrency Payment Gateway</title>
             <Layout>
                 <Topbar/>
-                {/* <Content_send/> */}
+                <Content_send/>
             </Layout>
         </StyledWrapper>
     )

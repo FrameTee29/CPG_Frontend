@@ -97,6 +97,7 @@ body {
 }
 
 .el-wrapper:hover .price {
+    font-size:12px;
   left: 20px;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -308,6 +309,10 @@ body {
   text-transform: uppercase;
   white-space: nowrap;
 }
+
+.sizeCloth{
+    width:150px;
+}
 `
 
     return (
@@ -326,11 +331,11 @@ body {
                                         <div class="row">
                                             <div class="el-wrapper">
                                                 <div class="box-up">
-                                                    <img class="img" src="http://code.slicecrowd.com/labs/4/images/t-shirt.png" alt="" />
+                                                    <img className="sizeCloth" src="/static/images/Linen_Black.jpg"  />
                                                     <div class="img-info">
                                                         <div class="info-inner">
-                                                            <span class="p-name">I feel like Pablo</span>
-                                                            <span class="p-company">Yeezy</span>
+                                                            <span class="p-name">Linen T-shirt</span>
+                                                            <span class="p-company">Black</span>
                                                         </div>
                                                         <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
                                                     </div>
@@ -342,7 +347,7 @@ body {
                                                     </div>
 
                                                     <a class="cart" href="#">
-                                                        <span class="price">$120</span>
+                                                        <span class="price">0.044411 ETH</span>
                                                         <span class="add-to-cart">
                                                             <span class="txt">Add in cart</span>
                                                         </span>
@@ -359,11 +364,11 @@ body {
                                         <div class="row">
                                             <div class="el-wrapper">
                                                 <div class="box-up">
-                                                    <img class="img" src="http://code.slicecrowd.com/labs/4/images/t-shirt.png" alt="" />
+                                                    <img className="sizeCloth" src="/static/images/Linen_Beige.jpg" />
                                                     <div class="img-info">
                                                         <div class="info-inner">
-                                                            <span class="p-name">I feel like Pablo</span>
-                                                            <span class="p-company">Yeezy</span>
+                                                            <span class="p-name">Linen T-shirt</span>
+                                                            <span class="p-company">DARK BEIGE</span>
                                                         </div>
                                                         <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
                                                     </div>
@@ -375,7 +380,7 @@ body {
                                                     </div>
 
                                                     <a class="cart" href="#">
-                                                        <span class="price">$120</span>
+                                                        <span class="price">0.044411 ETH</span>
                                                         <span class="add-to-cart">
                                                             <span class="txt">Add in cart</span>
                                                         </span>
@@ -392,11 +397,11 @@ body {
                                         <div class="row">
                                             <div class="el-wrapper">
                                                 <div class="box-up">
-                                                    <img class="img" src="http://code.slicecrowd.com/labs/4/images/t-shirt.png" alt="" />
+                                                    <img className="sizeCloth" src="/static/images/Linen_Brown.jpg" />
                                                     <div class="img-info">
                                                         <div class="info-inner">
-                                                            <span class="p-name">I feel like Pablo</span>
-                                                            <span class="p-company">Yeezy</span>
+                                                            <span class="p-name">Linen T-shirt</span>
+                                                            <span class="p-company">RED-BROWN</span>
                                                         </div>
                                                         <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
                                                     </div>
@@ -408,7 +413,7 @@ body {
                                                     </div>
 
                                                     <a class="cart" href="#">
-                                                        <span class="price">$120</span>
+                                                        <span class="price">0.044411 ETH</span>
                                                         <span class="add-to-cart">
                                                             <span class="txt">Add in cart</span>
                                                         </span>
@@ -425,11 +430,11 @@ body {
                                         <div class="row">
                                             <div class="el-wrapper">
                                                 <div class="box-up">
-                                                    <img class="img" src="http://code.slicecrowd.com/labs/4/images/t-shirt.png" alt="" />
+                                                    <img className="sizeCloth" src="/static/images/Polo_black.jpg" />
                                                     <div class="img-info">
                                                         <div class="info-inner">
-                                                            <span class="p-name">I feel like Pablo</span>
-                                                            <span class="p-company">Yeezy</span>
+                                                            <span class="p-name">Polo Shirt Slim Fit</span>
+                                                            <span class="p-company">BLACK/NARROW-STRIPED</span>
                                                         </div>
                                                         <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
                                                     </div>
@@ -441,7 +446,7 @@ body {
                                                     </div>
 
                                                     <a class="cart" href="#">
-                                                        <span class="price">$120</span>
+                                                        <span class="price">0.053311 ETH</span>
                                                         <span class="add-to-cart">
                                                             <span class="txt">Add in cart</span>
                                                         </span>
@@ -463,11 +468,11 @@ body {
                                         <div class="row">
                                             <div class="el-wrapper">
                                                 <div class="box-up">
-                                                    <img class="img" src="http://code.slicecrowd.com/labs/4/images/t-shirt.png" alt="" />
+                                                    <img className="sizeCloth" src="/static/images/Polo_striped.jpg"  loading="lazy"/>
                                                     <div class="img-info">
                                                         <div class="info-inner">
-                                                            <span class="p-name">I feel like Pablo</span>
-                                                            <span class="p-company">Yeezy</span>
+                                                            <span class="p-name">Polo Shirt Slim Fit</span>
+                                                            <span class="p-company">GREIGE/STRIPED</span>
                                                         </div>
                                                         <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
                                                     </div>
@@ -479,7 +484,7 @@ body {
                                                     </div>
 
                                                     <a class="cart" href="#">
-                                                        <span class="price">$120</span>
+                                                        <span class="price">0.053311 ETH</span>
                                                         <span class="add-to-cart">
                                                             <span class="txt">Add in cart</span>
                                                         </span>
@@ -496,13 +501,13 @@ body {
                                         <div class="row">
                                             <div class="el-wrapper">
                                                 <div class="box-up">
-                                                    <img class="img" src="http://code.slicecrowd.com/labs/4/images/t-shirt.png" alt="" />
+                                                    <img className="sizeCloth" src="/static/images/Jean_Blue.jpg" loading="lazy"/>
                                                     <div class="img-info">
                                                         <div class="info-inner">
-                                                            <span class="p-name">I feel like Pablo</span>
-                                                            <span class="p-company">Yeezy</span>
+                                                            <span class="p-name">Regular Jeans</span>
+                                                            <span class="p-company">DENIM BLUE</span>
                                                         </div>
-                                                        <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                                                        <div class="a-size">Available sizes : <span class="size">30 , 32 , 34 , 36</span></div>
                                                     </div>
                                                 </div>
 
@@ -512,7 +517,7 @@ body {
                                                     </div>
 
                                                     <a class="cart" href="#">
-                                                        <span class="price">$120</span>
+                                                        <span class="price">0.097811 ETH</span>
                                                         <span class="add-to-cart">
                                                             <span class="txt">Add in cart</span>
                                                         </span>
@@ -529,13 +534,13 @@ body {
                                         <div class="row">
                                             <div class="el-wrapper">
                                                 <div class="box-up">
-                                                    <img class="img" src="http://code.slicecrowd.com/labs/4/images/t-shirt.png" alt="" />
+                                                    <img className="sizeCloth" src="/static/images/Jean_Black.jpg" loading="lazy"/>
                                                     <div class="img-info">
                                                         <div class="info-inner">
-                                                            <span class="p-name">I feel like Pablo</span>
-                                                            <span class="p-company">Yeezy</span>
+                                                            <span class="p-name">Regular Jeans</span>
+                                                            <span class="p-company">BLACK/WASHED OUT</span>
                                                         </div>
-                                                        <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                                                        <div class="a-size">Available sizes : <span class="size">30 , 32 , 34 , 36</span></div>
                                                     </div>
                                                 </div>
 
@@ -545,7 +550,7 @@ body {
                                                     </div>
 
                                                     <a class="cart" href="#">
-                                                        <span class="price">$120</span>
+                                                        <span class="price">0.097811 ETH</span>
                                                         <span class="add-to-cart">
                                                             <span class="txt">Add in cart</span>
                                                         </span>
@@ -562,13 +567,13 @@ body {
                                         <div class="row">
                                             <div class="el-wrapper">
                                                 <div class="box-up">
-                                                    <img class="img" src="http://code.slicecrowd.com/labs/4/images/t-shirt.png" alt="" />
+                                                    <img  className="sizeCloth" src="/static/images/Jean_Grey.jpg" loading="lazy"/>
                                                     <div class="img-info">
                                                         <div class="info-inner">
-                                                            <span class="p-name">I feel like Pablo</span>
-                                                            <span class="p-company">Yeezy</span>
+                                                            <span class="p-name">Regular Jeans</span>
+                                                            <span class="p-company">GRAPHITE GREY</span>
                                                         </div>
-                                                        <div class="a-size">Available sizes : <span class="size">S , M , L , XL</span></div>
+                                                        <div class="a-size">Available sizes : <span class="size">30 , 32 , 34 , 36</span></div>
                                                     </div>
                                                 </div>
 
@@ -578,7 +583,7 @@ body {
                                                     </div>
 
                                                     <a class="cart" href="#">
-                                                        <span class="price">$120</span>
+                                                        <span class="price">0.097811 ETH</span>
                                                         <span class="add-to-cart">
                                                             <span class="txt">Add in cart</span>
                                                         </span>

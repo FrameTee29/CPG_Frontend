@@ -31,7 +31,7 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>Cryptocurrency Payment Gateway</title>
+          
           <link rel="icon" href="/favicon.ico" />
           <meta
             name="viewport"

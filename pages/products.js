@@ -12,6 +12,7 @@ const Products = () => {
 
     return (
         <StyledWrapper>
+            <title>Cryptocurrency Payment Gateway</title>
             <Layout>
                 <Topbar/>
                 <Content_product/>

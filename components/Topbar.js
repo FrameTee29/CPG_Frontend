@@ -11,7 +11,7 @@ const Topbar = () => {
    
 
     .Container_topbar{
-        font-family:'Poppins-Black';
+        font-family:'Poppins-Regular';
     }
 
     #components-layout-demo-responsive .logo {
@@ -33,6 +33,9 @@ const Topbar = () => {
         background: rgba(255, 255, 255, 0.2);
         margin: 16px;
     }
+    .ant-layout-sider-zero-width-trigger{
+        top: 0;
+    }
     
 `
 
@@ -50,6 +53,7 @@ const Topbar = () => {
         >
             <StyledWrapper>
                 {/* <div className="logo" /> */}
+                
                 <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']} className="Container_topbar">
                     <Menu.Item key="1" icon={<UserOutlined />}>Fashion Cloth</Menu.Item>
                     <Menu.Item key="2" icon={<VideoCameraOutlined />}>Mobile Phone</Menu.Item>

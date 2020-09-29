@@ -7,8 +7,8 @@ const { Header, Content, Footer, Sider } = Layout;
 
 const Content_product = () => {
     const StyledWrapper = styled.div`
-    
-    font-family:'Poppins-Black';
+
+    font-family:'Poppins-Regular';
 
     #components-layout-demo-responsive .logo {
         height: 32px;
@@ -31,7 +31,7 @@ const Content_product = () => {
     return (
         <Layout>
             <StyledWrapper>
-                <Header className="site-layout-sub-header-background" />
+                {/* <Header className="site-layout-sub-header-background" /> */}
                 <Content style={{ margin: '24px 16px 0' }}>
                     <div className="site-layout-background" >content</div>
                 </Content>

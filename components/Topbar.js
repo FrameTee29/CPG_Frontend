@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+import Link from 'next/link';
 import styled from 'styled-components';
 import { Layout, Menu } from 'antd';
 import { UploadOutlined, UserOutlined, VideoCameraOutlined } from '@ant-design/icons';
@@ -44,13 +45,13 @@ const Topbar = () => {
             }}
         >
             <StyledWrapper>
-                 
+
                 <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']} className="Container_topbar">
-                    <Menu.Item key="1" ><img src="/static/images/icons8-men's-pajama-40.png"/>Fashion Cloth</Menu.Item>
-                    <Menu.Item key="2" ><img src="/static/images/icons8-android-40.png"/>Mobile Phone</Menu.Item>
-                    <Menu.Item key="3" ><img src="/static/images/icons8-smart-watch-40.png"/>Watch</Menu.Item>
-                    <Menu.Item key="5" ><img src="/static/images/icons8-laptop-40.png"/>Computer</Menu.Item>
-                    <Menu.Item key="6" ><img src="/static/images/icons8-food-bar-40.png"/>Food</Menu.Item>
+                    <Menu.Item key="1" ><Link href="/"><a ><img src="/static/images/icons8-men's-pajama-40.png" />Fashion Cloth</a></Link></Menu.Item>
+                    <Menu.Item key="2" ><img src="/static/images/icons8-android-40.png" />Mobile Phone</Menu.Item>
+                    <Menu.Item key="3" ><img src="/static/images/icons8-smart-watch-40.png" />Watch</Menu.Item>
+                    <Menu.Item key="5" ><img src="/static/images/icons8-laptop-40.png" />Computer</Menu.Item>
+                    <Menu.Item key="6" ><img src="/static/images/icons8-food-bar-40.png" />Food</Menu.Item>
                 </Menu>
             </StyledWrapper>
         </Sider>
